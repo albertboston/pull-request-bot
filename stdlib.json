@@ -1,0 +1,48 @@
+{
+  "name": "steve/pull-request-bot",
+  "timeout": 20000,
+  "version": "0.0.0",
+  "build": "faaslang",
+  "events": [
+    {
+      "scheduler.hourly": {
+        "filename": "events/scheduler/hourly.js",
+        "subtype": {
+          "offset": "0 minutes"
+        }
+      }
+    },
+    {
+      "slack.command": {
+        "filename": "events/slack/command/add_reviewer.js",
+        "subtype": {
+          "command": "add_reviewer"
+        }
+      }
+    },
+    {
+      "github.pull_request": {
+        "filename": "events/github/pull_request/review_requested.js",
+        "subtype": {
+          "action": "review_requested"
+        }
+      }
+    },
+    {
+      "github.pull_request": {
+        "filename": "events/github/pull_request/review_request_removed.js",
+        "subtype": {
+          "action": "review_request_removed"
+        }
+      }
+    },
+    {
+      "github.pull_request_review": {
+        "filename": "events/github/pull_request_review/submitted.js",
+        "subtype": {
+          "action": "submitted"
+        }
+      }
+    }
+  ]
+}
