@@ -38,7 +38,7 @@ For the slash command's request URL, enter `https://<username>.events.stdlib.com
 
 ### Creating your add_reviewer Command on Slack
 
-You can create your add_reviwer command by visiting [api.slack.com/apps](https://api.slack.com/apps),
+You can create your add_reviewer command by visiting [api.slack.com/apps](https://api.slack.com/apps),
 selecting your app, then clicking **Slash commands** on the left sidebar.
 
 ![](./readme/images/slack-create-command.png)
